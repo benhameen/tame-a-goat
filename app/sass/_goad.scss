@@ -1,0 +1,16 @@
+.goad {
+  position: absolute;
+  z-index: 150;
+  width: 417px;
+  height: 237px;
+
+  left: 25px;
+  top: 100px;
+  transform: rotate(10deg);
+
+
+  background-image: url('../images/GoadtheGoat.gif');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+ }

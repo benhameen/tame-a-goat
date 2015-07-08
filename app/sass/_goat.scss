@@ -1,0 +1,67 @@
+.goat {
+  .head,
+  .body {
+    position: relative;
+  }
+
+  .head {
+    z-index: 110;
+    width: 320px;
+    height: 400px;
+    margin: 0 auto;
+    background-image: url('../images/heads-sm.png');
+    background-repeat: no-repeat;
+    background-position-x: 0;
+    cursor: pointer;
+
+    &.sad {
+      background-position-x: -320px;
+    }
+
+    &.angry {
+      background-position-x: -640px;
+    }
+
+    &.happy {
+      background-position-x: -960px;
+    }
+
+    &.ill {
+      background-position-x: -1280px;
+    }
+  }
+
+  .body {
+    top: -100px;
+    z-index: 100;
+    width: 487px;
+    height: 296px;
+    background-image: url('../images/bodies-sm.png');
+    background-repeat: no-repeat;
+    background-position-x: 0;
+
+    &.fat {
+      background-position-x: -487px;
+    }
+
+    &.skinny {
+      background-position-x: -974px;
+    }
+
+  }
+}
+
+.tombstone {
+  z-index: 100;
+  width: 608px;
+  height: 600px;
+  background-image: url('../images/Tombstone.png');
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  transition: transform 0.4s;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}

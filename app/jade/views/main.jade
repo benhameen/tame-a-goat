@@ -1,0 +1,39 @@
+div.scale-box(scale-box)
+  div.scale-wrapper
+    div.main
+      div.world
+        div.goad(tag-active-goad world='world' goat='world.goat' goading='goading' total='totalEarned' ng-hide='goatIsDead')
+        div.farm
+          div.background-circle
+            div.inner-circle
+          div.fence
+          div#foodToEat(tag-active-food food='world.goat.foodToEat' goat='world.goat')
+          h1.gameover(ng-show='goatIsDead') Score: ${{totalEarned | number:0}}
+          div.tombstone(ng-show='goatIsDead' ng-click='restart()')
+          //- a.restart(ng-show='goatIsDead' ng-click='restart()' href='#') Restart 
+          div.goat(ng-hide='goatIsDead')
+            div.head(ng-click='startGoad()' class='{{world.goat.getHeadState()}}')
+            div.body(class='{{world.goat.getBodyState()}}')
+      div.inventory
+        h1 Tame a Goat
+        div.statuses
+          div.status(ng-repeat='mood in goatMoods' class='{{mood}}')
+            p {{mood}}:
+            div.meter.animate.no-stripes(class='{{getMeterColor(mood)}}')
+              span(ng-style='getMeterWidth(mood)')
+        h1 Money
+        h3 ${{world.bank | number:2}} <span class='circle'></span> ${{profit | number:2}} / sec
+        div.lists
+          div.tabs
+            div.tab.food(ng-click='activePanel = "food"' ng-class='{"active":activePanel === "food"}')
+              h2 food
+            div.tab.equipment(ng-click='activePanel = "equipment"' ng-class='{"active":activePanel === "equipment"}')
+              h2 equipment
+          div.panels
+            div.panel.equipment(ng-show='activePanel === "equipment"')
+              div.equipment-list(ng-repeat='equipmentName in equipmentList')
+                div.equipment(tag-shop-equipment money='world.bank' itemname='equipmentName' properties='equipmentProperties[equipmentName]' inventory='world.inventory' count='world.inventory[equipmentName]')
+            div.panel.food(ng-hide='activePanel === "equipment"')
+              div.food-list(ng-repeat='foodName in foodList')
+                div.food(tag-shop-food money='world.bank' itemname='foodName' properties='foodProperties[foodName]' goat='world.goat'  goateating='world.goat.feeding()')
+      section.ticker(id='latest-tweets')

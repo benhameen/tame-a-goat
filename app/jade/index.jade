@@ -1,0 +1,29 @@
+doctype html
+html(lang="en")
+head
+  meta(charset="UTF-8")
+  meta(http-equiv="X-UA-Compatible", content="IE=edge")
+  title Tame A Goat
+  meta(name="viewport", content="width=device-width, initial-scale=1.0")
+  meta(name="mobileoptimized", content="0")
+  link(href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css')
+  link(href='//fonts.googleapis.com/css?family=Fredoka+One' rel='stylesheet' type='text/css')
+  //- link(href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css', rel='stylesheet')
+  link(href='css/index.css', rel='stylesheet')
+
+
+body(ng-app="TameAGoat")
+  div.wrapper(ng-controller="ApplicationCtrl")
+    div.background
+    div(ng-view="", id="angular-view-container")
+
+  script(type='text/javascript', src="//code.jquery.com/jquery-2.1.4.min.js")
+  //- script(type='text/javascript', src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js")
+  
+  //- script(type="text/javascript", src="https://cdn.mathjax.org/mathjax/2.5-latest/MathJax.js?config=TeX-AMS_HTML")
+  //- script(type='text/javascript', src="../shared/ckeditor-mhe/ckeditor.js")
+  //- script(type='text/javascript', src='js/fabric.min.js')
+  //- script(type='text/javascript', src="js/s9-widget.js")
+  //- script(type='text/javascript', src="js/js_ext.js")
+  script(type='text/javascript', src="js/bundle.js")
+  script(type='text/javascript', src="js/twitterFeed.js")

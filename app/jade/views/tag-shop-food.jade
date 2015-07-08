@@ -1,0 +1,18 @@
+div.item-container
+  div.item-image
+    div.scaled-image(class='{{itemname}}')
+  div.item-contents
+    div.item-title
+      h2 {{itemname}}
+      p ${{properties.price | number:2}}
+    button.purchase-button(ng-click='purchaseFood(itemname)' ng-disabled='!canBuyFood(itemname) || goateating') {{sufficientFunds(itemname) ? "BUY": "NEED MORE $$$"}}
+    div.stats
+      div.stat(ng-repeat='(key, value) in properties')
+        span.circle(class='{{getMeterColor(key)}}')
+        p {{value}}
+  //- label.expander
+  //-   input.expander(type='checkbox' ng-model='collapse')
+  //-   div.expander-label.expanded(ng-show='collapse') Hide
+  //-   div.expander-label.collapsed(ng-show='!collapse') Details
+  //- div(ng-show='collapse' ng-repeat='(key, value) in properties')
+  //-   div.item-property {{key}}: {{value}}

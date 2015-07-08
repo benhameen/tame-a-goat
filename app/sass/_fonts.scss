@@ -1,0 +1,55 @@
+// Font path
+$fontpath: '../../../widget_data/fonts/proxima-nova/';
+
+// Webfont: ProximaNova-Regular
+@font-face {
+  font-family: 'ProximaNova';
+  src: url($fontpath + 'proxima-nova-regular.eot'); // IE9 Compat Modes
+  src: url($fontpath + 'proxima-nova-regular.eot?#iefix') format('embedded-opentype'), // IE6-IE8
+   url($fontpath + 'proxima-nova-regular.woff') format('woff'), // Modern Browsers
+   url($fontpath + 'proxima-nova-regular.ttf') format('truetype'), // Safari, Android, iOS
+   url($fontpath + 'proxima-nova-regular.svg#ProximaNova-Regular') format('svg'); // Legacy iOS
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+
+// Webfont: ProximaNova-RegularIt
+@font-face {
+  font-family: 'ProximaNova';
+  src: url($fontpath + 'proxima-nova-regular-it.eot'); // IE9 Compat Modes
+  src: url($fontpath + 'proxima-nova-regular-it.eot?#iefix') format('embedded-opentype'), // IE6-IE8
+   url($fontpath + 'proxima-nova-regular-it.woff') format('woff'), // Modern Browsers
+   url($fontpath + 'proxima-nova-regular-it.ttf') format('truetype'), // Safari, Android, iOS
+   url($fontpath + 'proxima-nova-regular-it.svg#ProximaNova-RegularIt') format('svg'); // Legacy iOS
+  font-style: italic;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+
+// Webfont: ProximaNova-Bold
+@font-face {
+  font-family: 'ProximaNova';
+  src: url($fontpath + 'proxima-nova-bold.eot'); // IE9 Compat Modes
+  src: url($fontpath + 'proxima-nova-bold.eot?#iefix') format('embedded-opentype'), // IE6-IE8
+   url($fontpath + 'proxima-nova-bold.woff') format('woff'), // Modern Browsers
+   url($fontpath + 'proxima-nova-bold.ttf') format('truetype'), // Safari, Android, iOS
+   url($fontpath + 'proxima-nova-bold.svg#ProximaNova-Bold') format('svg'); // Legacy iOS
+  font-style: normal;
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
+}
+
+// Webfont: ProximaNova-BoldIt
+@font-face {
+  font-family: 'ProximaNova';
+  src: url($fontpath + 'proxima-nova-bold-it.eot'); // IE9 Compat Modes
+  src: url($fontpath + 'proxima-nova-bold-it.eot?#iefix') format('embedded-opentype'), // IE6-IE8
+   url($fontpath + 'proxima-nova-bold-it.woff') format('woff'), // Modern Browsers
+   url($fontpath + 'proxima-nova-bold-it.ttf') format('truetype'), // Safari, Android, iOS
+   url($fontpath + 'proxima-nova-bold-it.svg#ProximaNova-BoldIt') format('svg'); // Legacy iOS
+  font-style: italic;
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
+}
+

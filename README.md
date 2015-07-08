@@ -1,2 +1,8 @@
-# tame-a-goat
-The result of a 24-hour hackathon at Tag Creative Studio
+# Tame A Goat
+A goat taming game.
+```
+bower install
+npm install 
+grunt
+```
+run app from /build/index.html

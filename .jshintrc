@@ -1,0 +1,35 @@
+{
+  "node": true,
+  "browser": true,
+  "browserify": true,
+  "jquery": true,
+  "esnext": true,
+  "bitwise": true,
+  "forin": true,
+  "freeze": true,
+  "immed": true,
+  "latedef": "nofunc", // allow function declarations to be used before they are defined (hoisting)
+  "maxdepth": 4,
+  "newcap": true,
+  "noarg": true,
+  "nonew": true,
+  "quotmark": false, // don't enforce a single quotation mark style
+  "undef": true,
+  "unused": "vars",
+  "shadow": true, // allow variable shadowing (re-declaring a variable already declared)
+  "eqeqeq": true,
+  "asi": false, // suppress warnings about missing semicolons
+  "sub": true, // suppress warnings about using bracket notation when dot notation could be used
+  "globals": {
+    "jquery": false,
+    "$": false,
+    "angular": false,
+    "element": false,
+    "describe": false,
+    "beforeEach": false,
+    "it": false,
+    "expect": false,
+    "MathJax": false,
+    "s9": false
+  }
+}

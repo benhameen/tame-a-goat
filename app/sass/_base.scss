@@ -1,0 +1,87 @@
+// @media (min-width: 1200px) {
+// }
+
+$darkgrey: #292929;
+$brown: rgb(118, 104, 99);
+$grass-green: #526F35;
+$sky-blue: #3398db;
+$light-blue: lighten($sky-blue, 10%);
+$purple: rgb(155, 89, 182);
+$dark-purple: rgb(108, 62, 127);
+$light-purple: lighten($purple, 10%);
+$green: #2dcd71;
+$dark-green: darken($green, 10%);
+$yellow: #fec536;
+$blue: #3398db;
+$red: #e84c3c;
+$grey: #a3a3a3;
+$orange: #fa6c1d;
+$dark-orange: darken($orange, 10%);
+
+$br: 4px;
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  // background: #E4E3E9;
+  color: $darkgrey;
+  box-sizing: border-box;
+
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+*, 
+*:before, 
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Fredoka One', 'Verdana', sans-serif;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.main {
+  width: 1600px;
+  height: 900px;
+  padding: 0;
+  margin: 0;
+}
+
+.scale-wrapper {
+  margin: 0 auto;
+}
+
+.world,
+.inventory {
+  float: left;
+}
+
+.world {
+  overflow: hidden;
+}
+
+.inventory {
+  overflow-x: scroll;
+}

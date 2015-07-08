@@ -1,0 +1,258 @@
+.inventory {
+  width: calc(100% / 3);
+  height: 100%;
+  color: white;
+  background-color: $purple;
+  padding: 20px;
+  overflow: hidden;
+
+  .status {
+    display: flex;
+    flex-flow: row;
+    margin-bottom: 10px;
+
+    p {
+      text-transform: capitalize;
+      width: 25%;
+    }
+
+    .meter {
+      width: 75%;
+    }
+  }
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  .item-container {
+
+    background-color: $dark-purple;
+    border-radius: $br;
+    position: relative;
+    margin-bottom: 35px;
+    padding: 20px;
+    display: flex;
+    flex-flow: row;
+    box-shadow: inset 0 6px 0 0 rgba(0, 0, 0, 0.4);
+
+    .item-contents {
+      width: 80%;
+      margin-left: 10px;
+    }
+
+    .item-title {
+      display: flex;
+      flex-flow: row;
+
+      p,
+      h2 {
+        width: 50%;
+        margin: 0;
+        text-transform: capitalize;
+
+        &:last-child {
+          text-align: right;
+          text-transform: lowercase;
+        }
+      }
+    }
+
+    .purchase-button {
+      position: absolute;
+      right: 20px;
+      bottom: -25px;
+      padding: 10px 40px;
+      color: white;
+      background-color: $green;
+      border: 0;
+      border-radius: $br;
+      font-size: 20px;
+
+      &:hover {
+        background-color: $dark-green;
+      }
+
+      &:disabled {
+        background-color: $grey;
+      }
+    }
+  }
+
+  .panel {
+    height: 500px;
+    overflow-y: auto;
+  }
+
+  .equipment-list {
+    .scaled-image {
+      // background-size: 533px 85px;
+      background-image: url('../images/Equipment.png');
+    }
+  }
+
+  .food-list {
+    .scaled-image {
+      // background-size: 467px 85px;
+      background-image: url('../images/Food.png');
+    }
+  }
+
+  .item-image {
+    // float: left;
+    width: 20%;
+    height: 60px;
+    position: relative;
+
+    .scaled-image {
+      position: absolute;
+      top: -143%;
+      left: -65%;
+      width: 200px;
+      height: 225px;
+      // background-size: contain;
+      background-repeat: no-repeat;
+      transform: scale(0.5);
+
+
+      &.can {
+        background-position-x: -200px;
+      }
+
+      &.oats {
+        background-position-x: -400px;
+      }
+
+      &.barley {
+        background-position-x: -600px;
+      }
+
+      &.boot {
+        background-position-x: -800px;
+      }
+
+      &.ice-cream {
+        background-position-x: -1000px;
+      }
+
+      &.medicine {
+        background-position-x: -1200px;
+      }
+
+      &.shovel {
+        background-position: -200px;
+      }
+
+      &.coop {
+        background-position: -400px;
+        width: 400px;
+        left: -173%;
+        transform: scale(0.25);
+      }
+
+      &.barn {
+        background-position: -800px;
+      }
+
+      &.tractor {
+        background-position: -1000px;
+      }
+
+      &.silo {
+        background-position: -1200px;
+      }
+
+      &.harvester {
+        background-position: -1400px;
+        width: 400px;
+        left: -173%;
+        transform: scale(0.25);
+      }
+    }
+  }
+
+
+  .tabs {
+    margin: 20px 0;
+    // padding: 20px;
+    display: flex;
+    flex-flow: row;
+
+    .tab {
+      box-shadow: 0 6px 0 0 rgba(0, 0, 0, 0.4);
+      border-radius: $br;
+      width: 50%;
+      text-align: center;
+      background-color: $light-purple;
+      cursor: pointer;
+
+      &.food {
+        margin-right: 10px;
+      }
+
+      &.active {
+        box-shadow: inset 0 6px 0 0 rgba(0, 0, 0, 0.4);
+        background-color: $dark-purple;
+      }
+
+      h2 {
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .stats {
+    display: flex;
+    flex-flow: row;
+
+    .stat {
+      width: 25%;
+
+      p {
+        display: inline-block;
+      }
+
+      &:first-child,
+      &:nth-child(2) {
+        display: none;
+      }
+    }
+  }
+
+  .circle {
+    display: inline-block;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: $dark-purple;
+
+    &.green {
+      background-color: $green;
+    }
+
+    &.yellow {
+      background-color: $yellow;
+    }
+
+    &.blue {
+      background-color: $blue;
+    }
+
+    &.red {
+      background-color: $red;
+    }
+  }
+
+  .expander-label {
+    border-radius: 4px;
+    padding: 2px 4px;
+    width: 5em;
+    background-color: $green;
+    cursor: pointer;
+    text-align: center;
+
+    &:hover {
+      background-color: $dark-green;
+    }
+  }
+}

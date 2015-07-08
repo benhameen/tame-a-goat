@@ -1,0 +1,35 @@
+.active-food {
+  position: absolute;
+  z-index: 1000;
+  background-image: url('../images/Food.png');
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 224px;
+  left: 450px;
+  display: none;
+
+  &.can {
+    background-position-x: -200px;
+  }
+
+  &.oats {
+    background-position-x: -400px;  
+  }
+
+  &.barley {
+    background-position-x: -600px;
+  }
+  
+  &.boot {
+    background-position-x: -800px;
+  }
+
+  &.ice-cream {
+    background-position-x: -1000px;
+  }
+
+  &.medicine {
+    background-position-x: -1200px;
+  }
+
+}
